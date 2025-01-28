@@ -1,11 +1,13 @@
 :root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
-    --color-text: #444444;
-    --color-white: #FFFFFF;
+    --color-primary: #021c9e;
+    --color-text-primary: #4f99fd;
+    --color-secondary: #2f2100;
+    --color-tertiary: #393e40;
+    --color-button: #b23201;
+    --color-button-hover: #b34115;
+    --color-text: #bdb7af;
+    --color-white: #e8e6e3;
+    --color-scheme: #121212;
 }
 
 /* Estilos gerais */
@@ -43,7 +45,7 @@ body {
 .input-section {
     flex: 60%;
     background-color: var(--color-secondary);
-    border: 1px solid #000;
+    border: 1px solid rgb(140, 130, 115);
     border-radius: 64px 64px 0 0;
     display: flex;
     flex-direction: column;
@@ -65,7 +67,7 @@ body {
     font-family: "Inter", serif;
     font-size: 36px;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-text-primary);
     margin: 10px 0;
     text-align: center;
 }
@@ -82,7 +84,9 @@ body {
 .input-name {
     width: 100%;
     padding: 10px;
-    border: 2px solid #000;
+    border: 2px solid rgb(140, 130, 115);
+    background-color: var(--color-scheme);
+    color: white;
     border-radius: 25px 0 0 25px;
     font-size: 16px;
 }
@@ -111,18 +115,19 @@ button {
     font-size: 16px;
     border: 2px solid #000;
     border-radius: 25px;
+    border-color: rgb(140, 130, 115);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
 
 .button-add {
-    background-color: var(--color-tertiary);
-    color: var(--color-text);
+    background-color: var(--color-tertiary,#181a1b);
+    color: var(--color-text, #956012);
     border-radius: 0 25px 25px 0;
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background-color: #575656;
 }
 
 /* Listas */
