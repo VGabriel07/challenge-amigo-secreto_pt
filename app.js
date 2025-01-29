@@ -5,8 +5,12 @@ let nomeAmigo;
 function adicionarAmigo() {
     nomeAmigo = document.getElementById("amigo").value.trim();
     if (nomeAmigo === "") {
-        alert("Por favor, insira um nome");
+        alert("Por favor, insira um nome.");
         return;
+    }
+
+    if (amigos.includes(nomeAmigo)) {
+        return alert("Nome já adicionado! Por favor escolha outro.");
     }
     amigos.push(nomeAmigo);
     exibirListaDeAmigos();
