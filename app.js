@@ -7,14 +7,13 @@ function adicionarAmigo() {
     if (nomeAmigo === "") {
         alert("Por favor, insira um nome.");
         return;
+    } else if (amigos.includes(nomeAmigo)) {
+        return alert(`O nome ${nomeAmigo} já está cadastrado!`);
+    } else {
+        amigos.push(nomeAmigo);
+        exibirListaDeAmigos();
+        limparInput();
     }
-
-    if (amigos.includes(nomeAmigo)) {
-        return alert("Nome já adicionado! Por favor escolha outro.");
-    }
-    amigos.push(nomeAmigo);
-    exibirListaDeAmigos();
-    limparInput();
 }
 
 function limparInput() { // limpa o campo de inserir os nomes
@@ -23,11 +22,11 @@ function limparInput() { // limpa o campo de inserir os nomes
 }
 
 function exibirListaDeAmigos() {
-    let listaDeAmigos = document.getElementById("listaAmigos"); 
+    let listaDeAmigos = document.getElementById("listaAmigos");
     listaDeAmigos.innerHTML = ""; // Limpa a lista
 
-    for (let nomeDoAmigo of amigos) { 
-        let itemDaLista = document.createElement("li"); 
+    for (let nomeDoAmigo of amigos) {
+        let itemDaLista = document.createElement("li");
         itemDaLista.textContent = nomeDoAmigo;
         listaDeAmigos.appendChild(itemDaLista);
     }
